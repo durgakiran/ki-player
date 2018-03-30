@@ -4,5 +4,9 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  youtube: {
+    URL: 'https://www.googleapis.com/youtube/v3/search',
+    API_KEY: 'AIzaSyCC-ukHRZN52OLnWdo8BBaK5O5_OZPxZBM',
+  }
 };
