@@ -21,7 +21,7 @@ export class VideoListComponent implements OnInit {
       this.loadVideos();
     });
     this.json$ = this.store.select("NowPlaylistReducer");
-    console.log(JSON.stringify(this.json$));
+    //console.log(JSON.stringify(this.json$));
   }
   loadVideos() {
     this.store.dispatch(
