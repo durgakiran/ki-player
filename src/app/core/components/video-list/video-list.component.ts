@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class VideoListComponent implements OnInit {
   json$: Observable<AnalyserNode>;
-  string = JSON.stringify(this.json$);
+  nowPlaying$ = this.store.select('PlayVideoReducer');
   searchTerm = '';
   constructor(private store: Store<any>, private _route: ActivatedRoute) {
 

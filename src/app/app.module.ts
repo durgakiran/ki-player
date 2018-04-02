@@ -14,7 +14,7 @@ import { ROUTES } from './app-rotues';
 import { AppBodyComponent } from './containers/app-body/app-body.component';
 import { AppSidebarComponent } from './containers/app-sidebar/app-sidebar.component';
 import { AppContainerComponent } from './containers/app-container/app-container.component';
-import { NowPlaylistReducer } from './core/store/reducers/now-playlist.reducer';
+import { NowPlaylistReducer, PlayVideoReducer } from './core/store/reducers/now-playlist.reducer';
 import { NowPlaylistEffects } from './core/store/effects/now-playlist-effets';
 import { VideoListComponent } from './containers/video-list/video-list.component';
 import { AppVideoPlayerComponent } from './containers/app-video-player/app-video-player.component';
@@ -31,7 +31,7 @@ import { AppVideoPlayerComponent } from './containers/app-video-player/app-video
   ],
   imports: [
     NgbModule.forRoot(), BrowserModule, RouterModule.forRoot(ROUTES, { useHash: true }),
-    CoreModule, HttpClientModule, StoreModule.forRoot({ NowPlaylistReducer }),
+    CoreModule, HttpClientModule, StoreModule.forRoot([NowPlaylistReducer, PlayVideoReducer ]),
     EffectsModule.forRoot([NowPlaylistEffects]), FormsModule
   ],
   providers: [],

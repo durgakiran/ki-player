@@ -1,8 +1,10 @@
 <section>
   <div class="row container">
-    <div *ngFor="let video of videos" class="col-md-3 col-sm-3">
+    <div *ngFor="let video of videos" class="col-md-3 col-sm-3" ">
+    <div (click)="playMedia(video.id.videoId)>
       <img src="{{video.snippet.thumbnails.default.url}}" alt="{{video.id.kind}}" />
       <p>{{video.snippet.title}}</p>
+     </div>
     </div>
   </div>
 </section>

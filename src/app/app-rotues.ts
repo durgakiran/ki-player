@@ -1,4 +1,4 @@
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, I } from '@angular/router';
 import { AppContainerComponent } from './containers/app-container/app-container.component';
 export const ROUTES: Routes = [
     {

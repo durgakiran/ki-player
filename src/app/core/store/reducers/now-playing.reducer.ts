@@ -13,7 +13,7 @@ const initialVideo: PlayVideo = {
 export function PlayVideoReducer(state = initialVideo, action: PlayVideoActions.PlayActions): PlayVideo {
     switch (action.type) {
         case PlayVideoActions.PLAY_VIDEO:
-            const VideoId = action.payload.video;
+            const VideoId = action.payload;
             const play = true;
             return { ...initialVideo, VideoId , play};
 
