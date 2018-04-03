@@ -14,7 +14,7 @@ export class MediaPlayComponent implements OnChanges {
   constructor(private _sanitizer: DomSanitizer) {}
   ngOnChanges() {
     this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(
-      "https://www.youtube.com/watch?v=" + this.nowPlaying.VideoId
+      "https://www.youtube.com/embed/" + this.nowPlaying.VideoId
     );
   }
 }
